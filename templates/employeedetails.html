@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h3>Welcome {{session.get('firstname')}} {{session.get('lastname')}} and your credentials are as follows:-</h3><br>
+    <p>
+        Department : {{session.get('department')}}<br>
+        ContactNo : {{session.get('contactno')}}<br>
+        Email : {{session.get('email')}}<br>
+        Birthdate : {{session.get('birthdate')}}<br>
+    </p>
+{% endblock %}

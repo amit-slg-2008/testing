@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="container">
+        <form class="form-inline" method="POST" action="{{ url_for('employee_create') }}">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <div class="col-md-3">
+                        <label for="fname">First Name:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="firstname" name="firstname">
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <div class="col-md-3">
+                        <label for="lname">Last Name:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="lastname" name="lastname">
+                    </div>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <div class="col-md-3">
+                        <label for="dept">Department:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-control" id="department" name="department">
+                            <option>IT</option>
+                            <option>Sales</option>
+                            <option>Accounts</option>
+                            <option>Admin</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <div class="col-md-3">
+                        <label for="cno">Contact No:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="contactno" name="contactno">
+                    </div>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <div class="col-md-3">
+                        <label for="email">Email:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <div class="col-md-3">
+                        <label for="bdate">Birthdate:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" class="form-control" id="birthdate" name="birthdate">
+                    </div>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <div class="col-md-3">
+                        <label for="uname">Username:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="username" name="username">
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <div class="col-md-3">
+                        <label for="pwd">Password:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="uname"></label>
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="col-sm-3">
+                    <a href="{{ url_for('loginpage') }}">Login</a>
+                </div>
+            </div>
+        </form>  
+    </div>
+{% endblock %}
